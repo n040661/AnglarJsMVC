@@ -1,0 +1,241 @@
+﻿//*********************************
+// * SASS name:   Osuccess
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-18
+// * ChangeTime:  2015-08-18
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+//调用列表页样式
+//---------------------------------------
+@import '../widget/ticket';
+
+/**
+    订单详情
+*/
+
+.order-status{
+    @include worh(100% 7.7rem,width height);
+    background-color:white;
+    text-align:center;
+    line-height:7.7rem;
+    font-size:1.7rem;
+    color:#13b5b1;
+    font-weight:bold;
+}
+
+.order-item{
+    @include worh(100%,width);
+    @include margin-padding(2rem,top,margin);
+    background-color:white;
+
+    h4{
+        @include worh(100% 3.6rem,width height);
+        @include margin-padding(1rem,left,padding);
+        @include border(1px,solid,#e5e5e5,bottom);
+        color:#13b5b1;
+        font-weight:bold;
+        line-height:3.6rem;
+        position:relative;
+
+        span{
+            @include worh(9.5rem 100%,width height);
+            @include posistion(absolute,0 0,top right);
+            text-align:center;
+            line-height:3.6rem;
+            font-size:1.2rem;
+            color:white;
+
+            //待支付
+            &.Confirm {
+                background-color: #ff8635;
+            }
+            //待确认
+            &.Paid {
+                background-color: #eea941;
+            }
+            //已取消
+            &.Cancel {
+                background-color: #959595;
+            }
+            //已确认
+            &.Processed {
+                background-color: #74c058;
+            }
+            //待出行
+            &.Deployed {
+                background-color: #13b5b1;
+            }
+            //已完成
+            &.Completed {
+                background-color: #448ac9;
+            }
+            //取消中
+            &.Cancellation {
+                background-color:#bf73b8;
+            }
+        }
+    }
+
+    .item-content{
+        @include worh(100%,width);
+        @include margin-padding(1.2rem 1rem 2.3rem 1rem,t r b l,padding);
+        line-height:2rem;
+
+        .order-info{
+            li{
+                @include margin-padding(1rem,top,margin);
+
+                .cost-item{
+                    @include worh(24rem,width);
+                    span{
+                        @include worh(8rem,width);
+                        display:inline-block;
+                    }
+                }
+            }
+        }
+
+        .field-name,.field-content{
+            float:left;
+        }
+
+        li{
+            display:table;
+            line-height:2.2rem;
+
+            > span{
+                display:table-cell;
+            }
+        }
+
+    }
+
+    .supplement{
+        @include worh(100% 5rem,width height);
+        @include margin-padding(1rem,left,padding);
+        line-height:5rem;
+        background-color:#FCEFE2;
+        font-size:1.2rem;
+        color:#ff8635;
+    }
+
+    .btns-wrap {
+        @include worh(100% 8rem,width height);
+        @include margin-padding(1.5rem 2rem 2rem,top left right,padding);
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 3.5rem;
+            -moz-border-radius: 0.25rem;
+            -webkit-border-radius: 0.25rem;
+            border-radius: 0.25rem;
+        }
+
+        .go-detial {
+            @include worh(11rem 3.5rem,width height);
+            @include border(0.1rem,solid,#13b5b1,t r b l);
+            color:#13b5b1;
+        }
+
+        .back-home {
+            @include worh(11rem 3.5rem,width height);
+            @include border(0.1rem,solid,#ff7e00,t r b l);
+            color:#ff7e00;
+            float:right;
+        }
+
+        .go-pay {
+            @include worh(11rem 3.5rem,width height);
+            background-color:#ff7e00;
+            color:white;
+            float:right;
+        }
+    }
+}
+
+.cancel-rule{
+    @include worh(100%,width);
+    @include border(1px,solid,#eeeeee,top);
+    @include margin-padding(1rem,t r b l,padding);
+    background-color:white;
+    color:#959595;
+    line-height:2rem;
+
+    h4{
+        font-size:1.2rem;
+        color:#ff8635;
+    }
+}
+
+.cancel-popup {
+    @include worh(100% 100%,width height);
+    @include margin-padding(auto 0,t r b l,margin);
+    @include posistion(fixed,0,top);
+    max-width: 720px;
+    background-color: rgba(0,0,0,.3);
+
+    .cancel-popup-box {
+        @include worh(29.5rem,width);
+        @include posistion(fixed,50% 50%,top left);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        transform: translate(-50%,-50%);
+        background-color: white;
+
+        h5{
+            @include worh(100% 5rem,width height);
+            background-color:#009E96;
+            text-align:center;
+            line-height:5rem;
+            font-size:1.7rem;
+            color:white;
+        }
+
+        .cancel-intro{
+            @include worh(100%,width);
+            @include margin-padding(1rem 1rem 2rem,left right bottom,padding);
+
+            h6{
+                @include margin-padding(1.5rem,top,margin);
+                font-weight:bold;
+            }
+
+            span{
+                @include margin-padding(1.5rem,top,margin);
+                display:inline-block;
+                line-height:2rem;
+            }
+        }
+
+        .cancel-btn{
+            @include worh(100% 5.5rem,width height);
+            display:table;
+
+            span{
+                @include worh(50%,width);
+                display:table-cell;
+                vertical-align:middle;
+                text-align:center;
+                font-size:1.7rem;
+
+                &.close{
+                    background-color:#EEEEEE;
+                    color:#A0A0A0;
+                }
+
+                &.sure{
+                    background-color:#FF7E00;
+                    color:white;
+                }
+            }
+        }
+    }
+}

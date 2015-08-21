@@ -1,0 +1,61 @@
+﻿//*********************************
+// * SASS name:   Osuccess
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-18
+// * ChangeTime:  2015-08-18
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+//调用列表页样式
+//---------------------------------------
+@import '../widget/ticket';
+
+.ticket-item{
+    h3{
+        span:last-child{
+            float:left;
+        }
+    }
+}
+
+/**
+    更改头部样式
+*/
+
+.header{
+    .left{
+        background-image:none;
+    }
+}
+
+/**
+    下单成功
+*/
+
+.success-wrap{
+    @include worh(100%,width);
+    @include margin-padding(1rem 1rem 2rem,left right bottom,padding);
+}
+
+.success-header{
+    @include worh(100% 7.6rem,width height);
+    background-color:white;
+    text-align:center;
+    line-height:7.6rem;
+    font-size:1.7rem;
+    color:#13b5b1;
+    font-weight:bold;
+}
+
+.success-notice{
+    @include worh(100% 5rem,width height);
+    @include margin-padding(1rem,left,padding);
+    @include margin-padding(1.5rem,top,margin);
+    background-color:white;
+    line-height:5rem;
+    color:#f29a76;
+    font-size:0.9rem;
+}

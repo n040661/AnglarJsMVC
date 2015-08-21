@@ -1,0 +1,180 @@
+﻿//*********************************
+// * SASS name:   ChooseAirport
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-19
+// * ChangeTime:  2015-08-19
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+.empty-header{
+    height:0;
+}
+
+body{
+    max-width:unset;
+}
+
+/**
+    机场选择
+*/
+
+.search-wrap {
+    @include worh(100% 4.4rem,width height);
+    @include margin-padding(0.6rem 1rem,t r b l,padding);
+    @include margin-padding(0,right,padding);
+    background-color: white;
+
+    .search-input {
+        @include worh(90% 3.2rem,width height);
+        @include margin-padding(3rem,left,padding);
+        font-size:1.2rem;
+        border: none;
+        background:url('/Content/Images/layout/search-s.png') no-repeat;
+        background-position:0.7rem 0.65rem;
+        background-size:1.9rem auto;
+        background-color: #eeeeee;
+        -moz-border-radius: 0.25rem;
+        -webkit-border-radius: 0.25rem;
+        border-radius: 0.25rem;
+        float:left;
+    }
+
+    a{
+        @include margin-padding(0.5rem,left,margin);
+        @include posistion(relative,-0.3rem,top);
+        color:#535353;
+        font-size:0.9rem;
+        text-decoration:none;
+        display:inline-block;
+        text-align:center;
+
+        i{
+            display:block;
+        }
+    }
+}
+
+.hot-airport {
+    @include worh(100%,width);
+    @include margin-padding(1rem 1rem,left right,padding);
+    overflow:hidden;
+
+    h1{
+        @include margin-padding(0.9rem,top,margin);
+        font-size:0.9rem;
+        color:#13b5b1;
+    }
+
+    li {
+        @include worh(31%,width);
+        @include margin-padding(3.5% 3%,right top,margin);
+        @include margin-padding(1rem 0,t r b l,padding);
+        -moz-border-radius: 0.25rem;
+        -webkit-border-radius: 0.25rem;
+        border-radius: 0.25rem;
+        background-color: white;
+        text-align: center;
+        line-height:1.5rem;
+        float: left;
+
+        &:nth-child(3n+3) {
+            @include margin-padding(0,right,margin);
+        }
+
+        h5{
+            color:#13b5b1;
+            font-size:1.2rem;
+        }
+
+        span{
+            color:#626262;
+            font-size:0.9rem;
+        }
+    }
+}
+
+.airport-list{
+    @include worh(100%,width);
+
+    .list-block{
+        @include worh(100%,width);
+
+        h3{
+            @include worh(100% 3.1rem,width height);
+            @include border(1px,solid,#dcdcdc,bottom);
+            @include margin-padding(1rem,left,padding);
+            line-height:3.1rem;
+            color:#13b5b1;
+            font-size:1.2rem;
+        }
+
+        .list-wrap{
+            @include worh(100%,width);
+            background-color:white;
+
+            li{
+                @include worh(3.1rem,height);
+                @include margin-padding(1rem,left,padding);
+                @include border(1px,solid,#dcdcdc,bottom);
+                font-size:1.2rem;
+                line-height:3.1rem;
+            }
+        }
+    }
+}
+
+.alphabet-list {
+    @include posistion(fixed,0 0,top right);
+    @include margin-padding(2rem,top,margin);
+    display: none;
+    z-index: 99;
+
+    ul {
+        /*background-color:#cecece;*/
+        @include worh(100%,height);
+
+        li {
+            @include worh(40px 3.448%,width height);
+            line-height: 1.5rem;
+            font-size: 12px;
+            text-align: center;
+            color: #13b5b1;
+            position: relative;
+
+            a {
+                display: block;
+            }
+
+            .floatbox {
+                @include worh(33px 27px,width height);
+                @include margin-padding(-38px -4px,left top,margin);
+                @include posistion(absolute,0 0,left top);
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                background-color: rgba(19,181,177,.5);
+                color: white;
+                line-height:27px;
+                display:block;
+
+                &:after {
+                    @include worh(0 0,width height);
+                    @include posistion(absolute,-16px 8px,right top);
+                    content: '';
+                    border-width: 5px 8px;
+                    border-style: solid;
+                    border-color: transparent transparent transparent rgba(19,181,177,.5);
+                }
+            }
+        }
+    }
+}
+
+.search-list{
+    @include margin-padding(1rem,top,margin);
+    @include border(1px,solid,#dcdcdc,top);
+    display:none;
+}

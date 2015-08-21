@@ -1,0 +1,76 @@
+﻿//*********************************
+// * SASS name:   Mixin
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-14
+// * ChangeTime:  2015-08-14
+// *********************************/
+
+//宽高设置
+@mixin worh($sizes,$worh){
+    @for $i from 1 through length($worh){
+        #{nth($worh,$i)}:nth($sizes,$i);
+    }
+}
+
+//外边距设置和内边距设置
+@mixin margin-padding($widths,$direction,$who){
+    @if length($direction) == 4{
+        @if length($widths) == 1{
+            #{$who}:$widths;
+        }@elseif length($widths) == 2{
+            #{$who}:nth($widths,1) nth($widths,2);
+         }@elseif length($widths) == 3{
+              #{$who}:nth($widths,1) nth($widths,2) nth($widths,3);
+         }@elseif length($widths) == 4{
+              #{$who}:nth($widths,1) nth($widths,2) nth($widths,3) nth($widths,4);
+         }
+    }@else{
+         @for $i from 1 through length($direction){
+             #{$who}-#{nth($direction,$i)}:nth($widths,$i);
+         }
+     }
+}
+//边框设置
+@mixin border($widths,$styles,$colors,$direction){
+    @if length($direction) == 4 and length($widths) == 1 and length($styles) == 1 and length($colors) == 1{
+        border:$widths $styles $colors;
+    }@else{
+         @for $i from 1 through length($direction){
+             border-#{nth($direction,$i)}:nth($widths,$i) nth($styles,$i) nth($colors,$i);
+         }
+     }
+}
+//定位设置
+@mixin posistion($way,$sizes,$coordinate){
+    position:$way;
+    @for $i from 1 through length($coordinate){
+        #{nth($coordinate,$i)}:nth($sizes,$i);
+    }
+}
+//字体设置
+@mixin font($family,$size,$style,$weight,$color){
+    
+}
+//clearfix
+$lte7:ture;
+%clearfix{
+    @if $lte7{
+        *zoom:1;
+    }
+    &:before,
+    &:after{
+        content:"";
+        display:table;
+        font:0/0 a;
+    }
+    &:after{
+        clear:both;
+    }
+}
+//浮动
+%fl{
+    float:left;
+}
+%fr{
+    float:right;
+}

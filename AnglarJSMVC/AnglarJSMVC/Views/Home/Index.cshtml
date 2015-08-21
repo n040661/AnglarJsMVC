@@ -1,0 +1,29 @@
+﻿@{
+    ViewBag.Title = "订单列表";
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body ng-controller="OrderListController" ng-cloak>
+    <table >
+        <tr >
+            <td>姓名</td>
+            <td>年龄</td>
+            <td>手机</td>
+        </tr>
+        <tr ng-repeat="order in ordersList">
+            <td>{{order.Name}}</td>
+            <td>{{order.Age}}</td>
+            <td>{{order.Mobile}}</td>
+
+        </tr>
+    </table>
+</body>
+</html>
+<script src="~/Scripts/libs/angular.js"></script>
+<script src="~/Scripts/Controller/OrderController.js"></script>

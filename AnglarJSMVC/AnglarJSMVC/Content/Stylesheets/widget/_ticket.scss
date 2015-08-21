@@ -1,0 +1,229 @@
+﻿//*********************************
+// * SASS name:   Ticket
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-18
+// * ChangeTime:  2015-08-18
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+.ticket-item {
+    @include worh(100%,width);
+    @include border(1px,solid,#d4d4d4,t r b l);
+    @include margin-padding(1.5rem,top,margin);
+    background-color: white;
+    //待支付
+    &.Confirm {
+
+        h3 {
+            background-color: #ff8635;
+        }
+
+        .trip-wrap {
+            background-color: #fea061;
+        }
+    }
+    //待确认
+    &.Paid {
+
+        h3 {
+            background-color: #eea941;
+        }
+
+        .trip-wrap {
+            background-color: #f9b551;
+        }
+    }
+    //已取消
+    &.Cancel {
+
+        h3 {
+            background-color: #959595;
+        }
+
+        .trip-wrap {
+            background-color: #c9c9c9;
+        }
+    }
+    //已确认
+    &.Processed {
+
+        h3 {
+            background-color: #74c058;
+        }
+
+        .trip-wrap {
+            background-color: #6fcf4b;
+        }
+    }
+    //待出行
+    &.Deployed {
+
+        h3 {
+            background-color: #13b5b1;
+        }
+
+        .trip-wrap {
+            background-color: #22bfbb;
+        }
+    }
+    //已完成
+    &.Completed {
+
+        h3 {
+            background-color: #448ac9;
+        }
+
+        .trip-wrap {
+            background-color: #58a0e0;
+        }
+    }
+    //取消中
+    &.Cancellation {
+        h3 {
+            background-color: #bf73b8;
+        }
+
+        .trip-wrap {
+            background-color: #c483be;
+        }
+    }
+    //订单详情
+    &.order-detail {
+        @include margin-padding(0,top,margin);
+
+        h3 {
+            background-color: #0e6e6c;
+        }
+
+        .trip-wrap {
+            background-color: #13b5b1;
+        }
+    }
+
+    h3 {
+        @include worh(100% 3.6rem,width height);
+        @include margin-padding(1rem 1rem,left right,padding);
+        line-height: 3.6rem;
+        color: white;
+
+        span {
+            float: left;
+
+            &:last-child {
+                float: right;
+            }
+        }
+    }
+
+    .trip-wrap {
+        @include worh(100% 10rem,width height);
+        background-image: url("/Content/Images/ticket/sawtooth.png");
+        background-repeat: repeat-x;
+        background-position: bottom;
+        background-color: white;
+        display: table;
+
+        .come-icon {
+            @include worh(4.7rem,width);
+            display: table-cell;
+            vertical-align: middle;
+            text-align: center;
+
+            img {
+                @include worh(3rem,width);
+            }
+        }
+
+        .trip-name {
+            @include worh(30.2rem 10rem,width height);
+            display: table-cell;
+
+            li {
+                @include worh(5rem,height);
+                line-height: 5rem;
+                font-size: 1.7rem;
+                color: white;
+            }
+        }
+    }
+
+    .book-info {
+        @include worh(100% 6.2rem,width height);
+        @include margin-padding(1rem 1rem 1rem,top left right,padding);
+        @include border(1px,solid,#d2d2d2,bottom);
+
+        .driver-name {
+            float: left;
+            font-size: 1.2rem;
+        }
+
+        .time-price {
+            float: right;
+
+            span {
+                display: block;
+                text-align: right;
+
+                &.price {
+                    @include margin-padding(0.6rem,top,margin);
+                    font-size: 1.7rem;
+                    color: #ff7e00;
+                }
+            }
+        }
+
+    }
+
+    .order-info{
+        @include worh(100% 5rem,width height);
+        @include margin-padding(1rem 1rem 1rem,top left right,padding);
+        @include border(1px,solid,#d2d2d2,bottom);
+
+        .distance {
+            float: left;
+            font-size: 1.2rem;
+        }
+
+        .flight-no {
+            float: right;
+        }
+    }
+
+    .btns-wrap {
+        @include worh(100% 6.6rem,width height);
+        @include margin-padding(1.5rem 1rem 1rem,top left right,padding);
+
+        a {
+            display: inline-block;
+            text-decoration: none;
+            text-align: center;
+            line-height: 3.5rem;
+            -moz-border-radius: 0.25rem;
+            -webkit-border-radius: 0.25rem;
+            border-radius: 0.25rem;
+        }
+
+        .go-detial {
+            @include worh(11rem 3.5rem,width height);
+            @include border(0.1rem,solid,#13b5b1,t r b l);
+            color:#13b5b1;
+        }
+
+        .back-home {
+            @include worh(11rem 3.5rem,width height);
+            @include border(0.1rem,solid,#ff7e00,t r b l);
+            color:#ff7e00;
+            float:right;
+        }
+
+        .go-pay {
+            @include worh(11rem 3.5rem,width height);
+            background-color:#ff7e00;
+            color:white;
+            float:right;
+        }
+    }
+}

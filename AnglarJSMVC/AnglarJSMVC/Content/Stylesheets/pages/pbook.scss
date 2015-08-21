@@ -1,0 +1,468 @@
+﻿//*********************************
+// * SASS name:   Pbook
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-17
+// * ChangeTime:  2015-08-17
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+//调用产品列表样式
+//---------------------------------------
+@import 'plist';
+
+.car-list-wrap{
+    .car-list{
+
+        &:first-child{
+            @include margin-padding(1.9rem,top,margin);
+        }
+
+        &:hover{
+            border:none;
+        }
+    }
+}
+
+.serve-info{
+    @include margin-padding(0 1rem,t r b l,margin);
+    @include margin-padding(1.1rem,top,margin);
+    @include border(1px,solid,#c9c9c9,top);
+}
+
+/**
+    表单样式
+*/
+
+.form-select {
+    @include worh(5rem,height);
+    line-height: 5rem;
+    font-size: 1.2rem;
+    position: relative;
+
+    &::after {
+        @include worh(2rem 2rem,width height);
+        @include posistion(absolute,50% 0,top right);
+        content: '';
+        -moz-transform: translateY(-50%);
+        -ms-transform: translateY(-50%);
+        -o-transform: translateY(-50%);
+        -webkit-transform: translateY(-50%);
+        transform: translateY(-50%);
+        background: url(/Content/Images/layout/arrow-lt.png) no-repeat;
+        background-position: 50% 50%;
+        background-size: 2rem auto;
+    }
+}
+
+.form-title{
+    @include worh(6rem,height);
+    @include margin-padding(0 1rem,t r b l,padding);
+    line-height:6rem;
+    font-size:1.2rem;
+    color:#13b5b1;
+    font-weight:bold;
+}
+
+.form-field{
+    float:left;
+}
+
+.form-text{
+    @include worh(24rem 2.5rem,width height);
+    font-size:1.2rem;
+    line-height:2.5rem;
+    border:0;
+}
+
+.form-textarea {
+    @include worh(25.2rem 6.2rem,width height);
+    @include margin-padding(2rem,top,margin);
+    @include margin-padding(0.7rem,top,padding);
+    @include border(1px,solid,#c9c9c9,t r b l);
+    font-size: 1.2rem;
+}
+
+.form-field,.form-content{
+    display:table-cell;
+}
+
+/**
+    订单填写
+*/
+
+.travel-content{
+    @include margin-padding(0 1rem,t r b l,padding);
+    background-color:white;
+
+    li{
+        @include worh(5rem,height);
+        @include border(1px,solid,#c9c9c9,bottom);
+        line-height:5rem;
+
+        &:last-child{
+            @include worh(10.6rem,height);
+            border:0;
+
+            .form-field{
+                line-height:7rem;
+            }
+        }
+    }
+}
+
+
+.passenger-content {
+    @include margin-padding(0 1rem,t r b l,padding);
+    background-color: white;
+    clear: both;
+
+    li {
+        @include worh(5rem,height);
+        @include border(1px,solid,#c9c9c9,bottom);
+        line-height: 5rem;
+
+        &:last-child {
+            border: 0;
+        }
+
+        .count {
+            @include worh(3.5rem,height);
+            @include margin-padding(0.8rem,top,margin);
+            float: right;
+            line-height: 3.5rem;
+
+            .add, .minus {
+                @include worh(3.5rem 3.5rem,width height);
+                background-color: #eee;
+                font-size: 2rem;
+                color: #13b5b1;
+                display: inline-block;
+                -moz-border-radius: 3px;
+                -webkit-border-radius: 3px;
+                border-radius: 3px;
+                line-height: 3.5rem;
+                text-align: center;
+            }
+
+            em {
+                @include worh(3.5rem 3.5rem,width height);
+                text-align: center;
+                line-height: 3.5rem;
+                display: inline-block;
+                font-style: normal;
+                font-size: 2rem;
+            }
+        }
+    }
+}
+
+.payment-wrap{
+    clear:both;
+
+    .payment-content{
+        @include margin-padding(0 1rem,t r b l,padding);
+        background-color:white;
+
+        li{
+            @include worh(5rem,height);
+            @include border(1px,solid,#c9c9c9,bottom);
+            line-height:5rem;
+
+            .price{
+                float:right;
+                font-size:1.7rem;
+                color:#ff8635;
+            }
+
+            .pay-type{
+                float:right;
+                line-height:normal;
+
+                img{
+                    @include worh(5.35rem,width);
+                    @include margin-padding(1.2rem,top,margin);
+                }
+            }
+        }
+    }
+}
+
+.cancel-wrap{
+    @include margin-padding(1.3rem 1rem 2rem,t r b l,padding);
+    background-color:white;
+    clear:both;
+    line-height:1.4rem;
+    color:#f19149;
+
+    h5{
+        font-size:1.2rem;
+    }
+
+    span{
+        @include margin-padding(0.5rem,top,padding);
+        font-size:0.9rem;
+        display:inline-block;
+    }
+}
+
+.empty-f{
+    @include worh(7.3rem,height);
+    background-color:white;
+}
+
+.pay-wrap {
+    @include worh(100% 7.3rem,width height);
+    @include border(2px,solid,#ff8635,top);
+    @include posistion(fixed,0 0 0,left right bottom);
+    @include margin-padding(0 auto,t r b l,margin);
+    background-color: white;
+    max-width: 720px;
+    overflow:hidden;
+    display:table;
+    z-index:99;
+
+    > div {
+        font-size:1.7rem;
+        display:table-cell;
+        vertical-align:middle;
+        text-align:center;
+    }
+
+    .price-info {
+        @include worh(54% 7rem,width height);
+
+        span{
+            color:#ff7e00;
+            font-size:1.7rem;
+            font-weight:bold;
+        }
+    }
+
+    .price-detail {
+        @include worh(15% 7rem,width height);
+        background-color:#fbcd89;
+        color:white;
+    }
+
+    .gopay {
+        @include worh(7rem,height);
+        background-color:#ff8635;
+        color:white;
+        font-weight:bold;
+    }
+}
+
+.price-detail-popup{
+    @include worh(100% 100%,width height);
+    @include margin-padding(0 auto,t r b l,margin);
+    background-color: rgba(0, 0, 0,0.7);
+    max-width: 720px;
+    overflow:hidden;
+    display:none;
+
+    &.is-visible{
+        @include posistion(fixed,0 0 7.3rem,left right bottom);
+        display:block;
+    }
+}
+
+.popup-box{
+    @include worh(100%,width);
+    @include posistion(fixed,-20rem 0 0,bottom left right);
+    @include margin-padding(0 auto,t r b l,margin);
+    /*@include posistion(absolute,0 0 -17.2rem,left right bottom);*/
+    background-color:white;
+    max-width: 720px;
+    /*overflow:hidden;*/
+
+    .close-s{
+        @include worh(1.7rem 1.7rem,width height);
+        @include posistion(absolute,1.3rem 1.4rem,top right);
+        background:url('/Content/Images/layout/close-s.png') no-repeat;
+        background-position:50% 50%;
+        background-size:1.7rem auto;
+    }
+
+    h5{
+        @include margin-padding(1.3rem 1.4rem,top left,margin);
+        line-height:1.9rem;
+        font-size:1.7rem;
+        color:#FF8635;
+
+        i{
+            float:left;
+        }
+    }
+
+    .detail-list{
+        @include worh(100%,width);
+        @include margin-padding(1.3rem 1.4rem,t r b l,padding);
+
+        li{
+            @include worh(100% 1.8rem,width height);
+            @include margin-padding(1.4rem,top,margin);
+            background:url('/Content/Images/layout/list-bg.png') no-repeat;
+            background-position:50% 50%;
+            background-size:100% auto;
+            line-height:1.8rem;
+            text-align:left;
+
+            span{
+                background-color:white;
+                display:inline-block;
+            }
+        }
+    }
+
+    .supplement{
+        @include worh(5rem,height);
+        @include margin-padding(1.4rem,left,padding);
+        background-color:#fdf0e3;
+        line-height:5rem;
+        font-size:1.2rem;
+        color:#FF8635;
+    }
+}
+
+/**
+    time picker
+*/
+#timepicker-container {
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.35);
+    display: none;
+    font-size: 1em !important;
+}
+
+.timerpicker {
+    position: fixed;
+    width: 295px;
+    height: 302px;
+    margin: 0 auto;
+    background: white;
+}
+
+.timepicker-caption {
+    height: 40px;
+    background-color: rgb(30,140,116);
+}
+
+.timepicker-footer {
+    height: 52px;
+    clear: both;
+    background: rgb(239,239,239);
+    border-top: rgb(202,202,202) solid 1px;
+}
+
+.timepicker-column {
+    position: relative;
+    height: 210px;
+    float: left;
+    overflow-y: hidden;
+    color: rgb(139,139,139);
+}
+
+.day-column {
+    width: 192px;
+    text-align: center;
+}
+
+.hour-column {
+    width: 58px;
+}
+
+.minute-column {
+    width: 45px;
+}
+
+.timepicker-column > ul {
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: 100%;
+    top: 84px;
+    overflow-x: hidden;
+}
+
+    .timepicker-column > ul > li {
+        list-style: none;
+        height: 42px;
+        line-height: 42px;
+        font-size: 80%;
+    }
+
+.timer-seperator {
+    width: 100%;
+    height: 1px;
+    background: rgb(202,202,202);
+}
+
+    .timer-seperator:first-of-type {
+        top: 118px;
+    }
+
+    .timer-seperator:last-of-type {
+        top: 170px;
+    }
+
+.timepicker-column .current-option {
+    -webkit-transform-origin: 0% 50%;
+    -webkit-transform: scale(1.15,1.15);
+    color: black;
+}
+
+.timepicker-column.day-column .current-option {
+    -webkit-transform-origin: 50% 50%;
+}
+
+.timepicker-caption > * {
+    color: white;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+    float: left;
+    line-height: 100%;
+}
+
+.timepicker-caption > span:first-of-type {
+    font-weight: bolder;
+    height: 40px;
+    line-height: 40px;
+}
+
+.timepicker-footer > * {
+    display: inline-block;
+    width: 50%;
+    height: 100%;
+    float: left;
+    text-align: center;
+    line-height: 52px;
+    font-size: 1.2em;
+}
+
+.timepicker-confirm-btn {
+    color: rgb(74,154,135);
+}
+
+.timer-btn-seperator {
+    position: absolute;
+    top: 250px;
+    left: 50%;
+    width: 1px;
+    height: 52px;
+    background: rgb(202,202,202);
+}
+
+.time-period-tip {
+    top: 30%;
+    width: 100%;
+    text-align: center;
+}
+
+    .time-period-tip span {
+        color: rgb(255,126,11);
+    }

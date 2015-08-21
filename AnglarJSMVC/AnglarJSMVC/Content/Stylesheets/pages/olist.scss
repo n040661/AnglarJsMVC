@@ -1,0 +1,76 @@
+﻿//*********************************
+// * SASS name:   Osuccess
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-18
+// * ChangeTime:  2015-08-18
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+//调用列表页样式
+//---------------------------------------
+@import '../widget/ticket';
+
+/**
+    更改头部样式
+*/
+
+.header{
+    .right{
+
+        i{
+            @include worh(4rem 4.4rem,width height);
+            display:block;
+            background:url('/Content/Images/ticket/coupon-s.png') no-repeat;
+            background-position:50% 50%;
+            background-size:2.4rem auto;
+        }
+    }
+}
+
+/**
+    订单列表
+*/
+.order-list-wrap{
+    @include worh(100%,width);
+    @include margin-padding(1rem 1rem 2rem,left right bottom,padding);
+}
+
+.nav-tab {
+    @include worh(100% 4rem,width height);
+    @include border(1px,solid,#e5e5e5,t r b l);
+    background-color: white;
+    -moz-border-radius: 0.25rem;
+    -webkit-border-radius: 0.25rem;
+    border-radius: 0.25rem;
+    display:table;
+
+    span{
+        @include worh(50% 100%,width height);
+        -moz-border-radius: 0 0.25rem 0.25rem 0;
+        -webkit-border-radius: 0 0.25rem 0.25rem 0;
+        border-radius: 0 0.25rem 0.25rem 0;
+        display:table-cell;
+        line-height:4rem;
+        text-align:center;
+        font-size:1.2rem;
+
+        &:first-child{
+            color:#a0a0a0;
+        }
+
+        &:last-child{
+            background-color:#13b5b1;
+            color:white; 
+        }
+
+        a{
+            @include worh(100% 100%,width height);
+            display:inline-block;
+            color:#a0a0a0;
+            text-decoration:none;
+        }
+    }
+}

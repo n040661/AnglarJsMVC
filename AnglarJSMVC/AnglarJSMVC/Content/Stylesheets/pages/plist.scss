@@ -1,0 +1,176 @@
+﻿//*********************************
+// * SASS name:   Plist
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-14
+// * ChangeTime:  2015-08-17
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+/**
+    行程
+*/
+.trip-wrap {
+    @include worh(100% 10rem,width height);
+    background-color: white;
+    display:table;
+
+    .come-icon {
+        @include worh(4.7rem,width);
+        display:table-cell;
+        vertical-align:middle;
+        text-align:center;
+
+        img{
+            @include worh(3rem,width);
+        }
+    }
+
+    .trip-name{
+        @include worh(30.2rem 10rem,width height);
+        display:table-cell;
+
+        li{
+            @include worh(5rem,height);
+            line-height:5rem;
+            font-size:1.7rem;
+            
+            &:first-child{
+                @include border(1px,solid,#c9c9c9,bottom);
+            }
+        }
+    }
+
+    .trip-right{
+        @include worh(1.1rem,width);
+        display:table-cell;
+    }
+}
+/**
+    说明信息
+*/
+
+.trip-intro{
+    @include worh(3.4rem,height);
+    background-color:#e5e5e5;
+    line-height:3.4rem;
+    text-align:center;
+    font-size:1.2rem;
+    color:#626262;
+}
+
+/**
+    产品列表
+*/
+
+.car-list-wrap {
+    @include worh(100%,width);
+
+    .car-list {
+        @include worh(100%,width);
+        @include margin-padding(1.9rem,top,margin);
+        background-color: white;
+
+        &:first-child{
+            @include margin-padding(0,top,margin);
+        }
+
+        &:hover{
+            @include border(1px,solid,#ff7e00,t r b l);
+            @include border(3px,solid,#ff7e00,right);
+            
+        }
+
+        .car-title {
+            @include worh(100% 2.8rem,width height);
+            @include margin-padding(1rem 1.3rem,left top,padding);
+            font-size: 1.2rem;
+            font-weight:bold;
+        }
+
+        .car-info {
+            @include worh(100%,width);
+            @include margin-padding(1rem 1.5rem,left bottom,padding);
+            display: table;
+
+            > div {
+                display: table-cell;
+                vertical-align: middle;
+                text-align:center;
+            }
+
+            .car-photo {
+                @include worh(10rem,width);
+
+                img {
+                    @include worh(8.88rem,width);
+                }
+            }
+
+            .car-desc {
+                @include worh(15.2rem,width);
+                @include border(1px,solid,#e5e5e5,right);
+                @include margin-padding(1.7rem,left,padding);
+
+
+                .car-capacity {
+                    @include worh(13.5rem 4.1rem,width height);
+                    font-size: 1.2rem;
+
+                    span {
+                        @include worh(6.75rem 4.1rem,width height);
+                        @include margin-padding(1rem 1rem,top bottom,padding);
+                        display: table-cell;
+                        vertical-align: bottom;
+                        color: #535353;
+                        text-align:left;
+                    }
+                }
+
+                .car-featrue {
+                    @include worh(13.5rem,width);
+                    text-align:left;
+
+                    li {
+                        @include worh(5.5rem,width);
+                        @include margin-padding(0.5rem,top,margin);
+                        line-height:1.5rem;
+                        text-align:center;
+                        font-size:0.9rem;
+                        background-color: #f0f0f0;
+                        color:#7d7d7d;
+                        -moz-border-radius: 0.25rem;
+                        -webkit-border-radius: 0.25rem;
+                        border-radius: 0.25rem;
+                        display:inline-block;
+
+                        &:nth-child(2n+2){
+                            @include margin-padding(0.5rem,left,margin);
+                        }
+                    }
+                }
+            }
+
+            .car-price{
+                @include worh(97rem,width);
+                @include margin-padding(0 auto,t r b l,margin);
+
+                .regular-price{
+                    @include margin-padding(0.5rem,top,margin);
+                    display:block;
+                    color:#959595;
+                    font-size:0.9rem;
+                }
+
+                .promotion-price{
+                    display:block;
+                    color:#ff7e00;
+                    font-size:1.7rem;
+                    font-weight:bold;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,114 @@
+﻿//*********************************
+// * SASS name:   Icon
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-14
+// * ChangeTime:  2015-08-14
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+//车辆信息
+
+.seats{
+    @include worh(1.65rem 2.3rem,width height);
+    @include margin-padding(0.6rem,right,margin);
+    background:url('/Content/Images/layout/seats.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.65rem auto;
+    display:inline-block;
+}
+
+.luggages{
+    @include worh(1.55rem 1.5rem,width height);
+    @include margin-padding(0.6rem,right,margin);
+    background:url('/Content/Images/layout/luggage-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.55rem auto;
+    display:inline-block;
+}
+
+.star{
+    @include worh(0.8rem 0.8rem,width height);
+    @include margin-padding(0.4rem,right,margin);
+    background:url('/Content/Images/layout/star-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:0.8rem auto;
+    display:inline-block;
+}
+
+.fixed-price{
+    @include worh(3.1rem 1.4rem,width height);
+    @include margin-padding(0.6rem,right,margin);
+    background:url('/Content/Images/layout/fixed-price.png') no-repeat;
+    background-position:50% 50%;
+    background-size:3.1rem auto;
+    display:inline-block;
+}
+
+.fixed-price-l{
+    @include worh(4.8rem 2.2rem,width height);
+    @include posistion(relative,3px,top);
+    background:url('/Content/Images/layout/fixed-price-l.png') no-repeat;
+    background-position:50% 50%;
+    background-size:4.8rem auto;
+    display:inline-block;
+}
+
+.price-s{
+    @include worh(1.9rem 1.9rem,width height);
+    @include margin-padding(0.4rem,right,margin);
+    background:url('/Content/Images/layout/price-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.9rem auto;
+    display:inline-block;
+}
+
+.ok{
+    @include worh(2rem 2rem,width height);
+    @include margin-padding(0.4rem,right,margin);
+    @include posistion(relative,0.4rem,top);
+    background:url('/Content/Images/layout/ok.png') no-repeat;
+    background-position:50% 50%;
+    background-size:2rem auto;
+    display:inline-block;
+}
+
+.jj-s{
+    @include worh(1.9rem 1.5rem,width height);
+    @include margin-padding(0.4rem,right,margin);
+    @include posistion(relative,0.4rem,top);
+    background:url('/Content/Images/ticket/jj-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.9rem auto;
+    display:inline-block;
+}
+
+.sj-s{
+    @include worh(1.9rem 1.7rem,width height);
+    @include margin-padding(0.4rem,right,margin);
+    @include posistion(relative,0.4rem,top);
+    background:url('/Content/Images/ticket/sj-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.9rem auto;
+    display:inline-block;
+}
+
+.contain-s{
+    @include worh(1.8rem 1.8rem,width height);
+    @include margin-padding(0.4rem,left,margin);
+    @include posistion(relative,0.4rem,top);
+    background:url('/Content/Images/layout/contain-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:1.8rem auto;
+    display:inline-block;
+}
+
+.hour24{
+    @include worh(2.4rem 2.4rem,width height);
+    background:url('/Content/Images/layout/24h-s.png') no-repeat;
+    background-position:50% 50%;
+    background-size:2.4rem auto;
+    display:inline-block;
+}

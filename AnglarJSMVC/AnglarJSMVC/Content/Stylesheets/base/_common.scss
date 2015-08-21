@@ -1,0 +1,89 @@
+﻿//*********************************
+// * SASS name:   Common
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-14
+// * ChangeTime:  2015-08-14
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+html {
+    font-size: 62.5% !important;
+}
+
+@media only screen and (min-width:360px) {
+	html {
+        font-size:70% !important;
+	}
+}
+
+@media only screen and (min-width:414px) {
+	html {
+        font-size:80% !important;
+	}
+}
+
+@media only screen and (min-width:540px) {
+	html {
+        font-size:100% !important;
+	}
+}
+
+@media only screen and (min-width:720px) {
+	html {
+        font-size: 125% !important;
+	}
+}
+body { 
+    font-family:Arial,"Hiragino Sans GB","Microsoft Yahei","simsun";
+    @include worh(320px 720px,min-width max-width);
+    @include margin-padding(0 auto,t r b l,margin);
+    background-color:#eee;
+    color:#525252;
+}
+
+input, select, textarea {
+    padding:0;
+    @include margin-padding(0.35rem,left,padding);
+    font-family: Arial,"Hiragino Sans GB","Microsoft Yahei","simsun";
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.nomargin{
+    margin:0 !important;
+}
+
+//alert
+
+.alert {
+    @include margin-padding(1rem,t r b l,padding);
+    @include posistion(fixed,100% 50%,top left);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    -moz-border-radius: 0.5rem;
+    -webkit-border-radius: 0.5rem;
+    border-radius: 0.5rem;
+    font-size: 1.2rem;
+    background-color: rgba(0,0,0,.5);
+    color: white;
+    text-align: center;
+    -moz-transition: all ease-in-out 400ms;
+    -o-transition: all ease-in-out 400ms;
+    -webkit-transition: all ease-in-out 400ms;
+    transition: all ease-in-out 400ms;
+
+    &.in{
+        top:80%;
+    }
+
+    &.out{
+        top:100%;
+    }
+}

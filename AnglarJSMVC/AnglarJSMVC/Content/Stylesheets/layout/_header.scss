@@ -1,0 +1,63 @@
+﻿//*********************************
+// * SASS name:   Header
+// * Author:      HZC_qd
+// * CreateTime:  2015-08-14
+// * ChangeTime:  2015-08-14
+// *********************************/
+
+//调用共用插件SASS
+//---------------------------------------
+@import '../helpers/mixin';
+
+
+/**
+    页面顶部
+*/
+
+.header{
+    @include worh(100% 4.5rem,width height);
+    background-color:#13b5b1;
+    text-align:center;
+    line-height:4.8rem;
+    position:relative;
+
+    .left{
+        @include worh(4.5rem 4.5rem,width height);
+        @include posistion(absolute,0 0,top left);
+        display:block;
+        background:url('/Content/Images/layout/goback.png') no-repeat;
+        background-position:50% 50%;
+        background-size:2.4rem auto;
+    }
+
+    .title{
+        font-size:1.7rem;
+        display:inline-block;
+        color:white;
+    }
+
+    .right{
+        @include worh(4.5rem 4.5rem,width height);
+        @include posistion(absolute,0 0,top right);
+        display:inline-block;
+
+        i{
+            @include worh(4.5rem 4.5rem,width height);
+            display:block;
+            background:url('/Content/Images/layout/home.png') no-repeat;
+            background-position:50% 50%;
+            background-size:2.4rem auto;
+
+            &.coupon{
+                background:url('/Content/Images/ticket/coupon-s.png') no-repeat;
+                background-position:50% 50%;
+                background-size:2.4rem auto;
+            }
+        }
+    }
+}
+
+.empty-header{
+    @include worh(1.5rem,height);
+    content:'';
+}
