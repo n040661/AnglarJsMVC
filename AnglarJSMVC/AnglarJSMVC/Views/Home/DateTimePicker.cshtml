@@ -1,0 +1,22 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html ng-app="datetime">
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>DateTimePicker</title>
+</head>
+<body>
+    <div ng-controller="DateTimePicker">
+        <ul>
+            <li class="form-select" ng-click="chooseDate()">
+                <span class="use-date load" name="PlanTime">{{PlanTime}} </span>
+            </li>
+        </ul>
+    </div>
+    @RenderPage("~/Views/Shared/_TimePicker.cshtml")
+</body>
+</html>

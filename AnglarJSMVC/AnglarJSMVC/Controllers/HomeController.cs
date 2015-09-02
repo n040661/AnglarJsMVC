@@ -16,6 +16,12 @@ namespace AnglarJSMVC.Controllers
         }
 
 
+        public ActionResult DateTimePicker()
+        {
+            return View();
+        }
+
+
 
 
     }
